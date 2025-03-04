@@ -1,0 +1,27 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Smoky" verbose="1">
+    <test name="Smoky">
+        <classes>
+            <class name="com.phonebook.tests.HomePageTests"/>
+            <class name="com.phonebook.tests.LoginTests">
+                <methods>
+                    <exclude name=".*Negative.*"/>
+                </methods>
+            </class>
+            <class name="com.phonebook.tests.AddContactsTests">
+             <parameter name="name" value="Florian"></parameter>
+             <parameter name="lastName" value="Wirtz"></parameter>
+             <parameter name="phone" value="1234567890"></parameter>
+             <parameter name="email" value="florian@gm.com"></parameter>
+             <parameter name="address" value="Munich"></parameter>
+             <parameter name="desc" value="midfielder"></parameter>
+            <methods>
+                <exclude name=".*From.*"/>
+            </methods>
+            </class>
+            <class name="com.phonebook.tests.DeleteContactTests"/>
+        </classes>
+    </test>
+
+</suite>
